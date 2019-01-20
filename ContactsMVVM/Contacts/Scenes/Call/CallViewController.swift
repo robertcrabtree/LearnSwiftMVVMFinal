@@ -19,12 +19,12 @@ class CallViewController: UIViewController {
     
     var viewModel: CallViewModel!
     
-    var callDidEnd: (() -> Void)?
+    var completion: (() -> Void)?
     
     // MARK: Actions
 
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
-        callDidEnd?()
+        completion?()
     }
     
     // MARK: View Life Cycle

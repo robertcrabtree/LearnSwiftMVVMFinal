@@ -13,7 +13,7 @@ class CallCoordinator {
     private let contactUUID: String
     private let presentingViewController: UIViewController
     
-    var callDidEnd: (() -> Void)?
+    var completion: (() -> Void)?
 
     init(contactUUID: String, presentingViewController: UIViewController) {
         self.contactUUID = contactUUID
@@ -27,9 +27,9 @@ class CallCoordinator {
         callViewController.modalPresentationStyle = .custom
         callViewController.modalTransitionStyle = .crossDissolve
         callViewController.viewModel = CallViewModel(contactUUID: contactUUID)
-        callViewController.callDidEnd = { [weak self] in
+        callViewController.completion = { [weak self] in
             self?.presentingViewController.dismiss(animated: true, completion: nil)
-            self?.callDidEnd?()
+            self?.completion?()
         }
         presentingViewController.present(callViewController, animated: true, completion: nil)
     }

@@ -62,7 +62,7 @@ class ContactsCoordinator {
             contactUUID: uuid,
             presentingViewController: contactsViewController
         )
-        callCoordinator?.callDidEnd = { [weak self] in
+        callCoordinator?.completion = { [weak self] in
             self?.callCoordinator = nil // release resources
         }
         callCoordinator?.start()
