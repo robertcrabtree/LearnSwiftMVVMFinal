@@ -48,8 +48,6 @@ class ContactViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // View notifies the view controller of user interaction
-    
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         guard isValidContact() else {
             showOKAlert(title: "Forbidden!",
@@ -57,8 +55,6 @@ class ContactViewController: UIViewController {
                         completion: nil)
             return
         }
-        
-        // View controller interacts with the model
         
         let contact = Contact(
             uuid: contactUUID ?? UUID().uuidString,
