@@ -21,21 +21,7 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     @IBOutlet weak var avatarView: UIImageView!
     
-    var contactUUID: String? {
-        didSet {
-            guard let contactUUID = contactUUID else { return }
-            let realm = try! Realm()
-            let contact = realm.object(
-                ofType: Contact.self,
-                forPrimaryKey: contactUUID
-            )!
-            
-            firstName = contact.firstName
-            lastName = contact.lastName
-            phoneNumber = contact.phoneNumber
-            gender = contact.gender
-        }
-    }
+    var contactUUID: String?
     
     private var firstName = ""
     private var lastName = ""
@@ -103,6 +89,19 @@ class ContactViewController: UIViewController {
         tapper.cancelsTouchesInView = false
         view.addGestureRecognizer(tapper)
         
+        if let contactUUID = contactUUID {
+            let realm = try! Realm()
+            let contact = realm.object(
+                ofType: Contact.self,
+                forPrimaryKey: contactUUID
+                )!
+            
+            firstName = contact.firstName
+            lastName = contact.lastName
+            phoneNumber = contact.phoneNumber
+            gender = contact.gender
+        }
+
         firstNameTextField.text = firstName
         lastNameTextField.text = lastName
         phoneNumberTextField.text = phoneNumber
