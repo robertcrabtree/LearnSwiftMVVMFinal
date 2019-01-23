@@ -69,17 +69,17 @@
 				D40AFB3A21E0087200BC0071 /* LaunchScreen.storyboard */,
 				D40AFB3521E0087100BC0071 /* Main.storyboard */,
 				D40AFB5221E190B100BC0071 /* Models */,
-				D40AFB4F21E1908300BC0071 /* Scenes */,
+				D40AFB4F21E1908300BC0071 /* Screens */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		D40AFB4F21E1908300BC0071 /* Scenes */ = {
+		D40AFB4F21E1908300BC0071 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				D43B497321E298E3008050FE /* Contact */,
 			);
-			path = Scenes;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		D40AFB5221E190B100BC0071 /* Models */ = {
