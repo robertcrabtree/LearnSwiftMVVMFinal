@@ -23,10 +23,10 @@ class ContactViewController: UIViewController {
     
     var contactUUID: String?
     
-    private var firstName = ""
-    private var lastName = ""
-    private var phoneNumber = ""
-    private var gender = Contact.Gender.male
+    var firstName = ""
+    var lastName = ""
+    var phoneNumber = ""
+    var gender = Contact.Gender.male
     
     // MARK: Actions
     
