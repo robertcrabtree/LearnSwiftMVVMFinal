@@ -148,20 +148,20 @@
 				D40AFB3D21E0087200BC0071 /* Info.plist */,
 				D40AFB3A21E0087200BC0071 /* LaunchScreen.storyboard */,
 				D40AFB5221E190B100BC0071 /* Models */,
-				D40AFB4F21E1908300BC0071 /* Scenes */,
+				D40AFB4F21E1908300BC0071 /* Screens */,
 				D40AFB5121E190A300BC0071 /* Seeds */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		D40AFB4F21E1908300BC0071 /* Scenes */ = {
+		D40AFB4F21E1908300BC0071 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				D43B497A21E2AE28008050FE /* Call */,
 				D43B497321E298E3008050FE /* Contact */,
 				D40AFB5521E190E500BC0071 /* Contacts */,
 			);
-			path = Scenes;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		D40AFB5121E190A300BC0071 /* Seeds */ = {

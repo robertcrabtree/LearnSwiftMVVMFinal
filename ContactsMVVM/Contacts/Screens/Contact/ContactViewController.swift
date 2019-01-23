@@ -28,7 +28,7 @@ class ContactViewController: UIViewController {
             let contact = realm.object(
                 ofType: Contact.self,
                 forPrimaryKey: contactUUID
-                )!
+            )!
             
             firstName = contact.firstName
             lastName = contact.lastName
